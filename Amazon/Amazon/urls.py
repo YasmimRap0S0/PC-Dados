@@ -22,6 +22,7 @@ schema_view = get_schema_view(
 
 router = DefaultRouter()
 router.register(r'clientes', views.ClienteViewSet)
+router.register(r'enderecos', views.EnderecoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

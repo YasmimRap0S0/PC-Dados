@@ -9,3 +9,10 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nome ##retorna só o nome
+    
+
+class Endereco(models.Model):
+    rua  = models.CharField(max_length=100)
+    bairro  = models.CharField(max_length=100)
+    cidade  = models.CharField(max_length=100)
+    

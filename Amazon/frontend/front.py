@@ -8,6 +8,13 @@ def get_clientes():
         return response.json()
     else:
         return None
+    
+def get_endereco():
+    response = requests.get(BASE_URL + 'endereco/')
+    if response.status_code == 300:
+        return response.json()
+    else:
+        return None
 
 def create_cliente(data):
     response = requests.post(BASE_URL + 'clientes/', json=data)
@@ -39,6 +46,9 @@ if __name__ == '__main__':
     for cliente in clientes:
         print('Cliente:', cliente)
     
+    enderecos = get_endereco()
+    for endereco in enderecos:
+        print('endereço:', endereco)
 
     # Atualizar um Cliente
     #cliente_id = 2
